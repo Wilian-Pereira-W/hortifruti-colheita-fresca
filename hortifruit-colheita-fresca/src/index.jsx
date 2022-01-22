@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import ProductListProvider from './context/ProductListProvider';
+import CartProvider from './context/CartProvider';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ProductListProvider>
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </ProductListProvider>,
   document.getElementById('root'),
 );
