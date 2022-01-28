@@ -11,7 +11,7 @@ function ProductListProvider({ children }) {
       .get('/all')
       .then((response) => setProduct(response.data))
       .catch((err) => {
-        console.error(`ops! ocorreu um erro${err}`);
+        console.error(`ops! ocorreu um erro ${err}`);
       });
   }, []);
 
