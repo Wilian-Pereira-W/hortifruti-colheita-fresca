@@ -10,9 +10,7 @@ function ProductListProvider({ children }) {
     apiHortiFruti
       .get('/all')
       .then((response) => setProduct(response.data))
-      .catch((err) => {
-        console.error(`ops! ocorreu um erro ${err}`);
-      });
+      .catch((err) => Promise.reject(err));
   }, []);
 
   const context = useMemo(() => ({
